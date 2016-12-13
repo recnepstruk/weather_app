@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <!--<script src="app/app.routes.js"></script>-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="WeatherApp">
+    <div class="mainContain">
+        <div class="jumbotron">
+            <h1>Prestige Weather World Wide</h1></div>
+        <!-- Start of Main DIV -->
+        <section>
+            <div class="container searchField">
+                <!-- search field start -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>City</h2>
+                        <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="form-control input-lg" placeholder="ex. Denver" />
+                                <span class="input-group-btn">
+                        		<button class="btn btn-info btn-lg" type="button">
+                            	<i class="glyphicon glyphicon-search"></i>
+                        		</button>
+                    			</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="info-bar">
+                        <div class="container">
+                         
+                        </div>
+                    </div>
+                    <main>
+                        <section class="module parallax parallax-1">
+                            <div class="container weatherContain" ng-controller="MainController">
+                                <current-conditions info="curr_cond"></current-conditions>
+                            </div>
+                        </section>
+                        <section class="module content">
+                            <div class="container">
+                                <!-- <h2>...........</h2> -->
+                           
+                            </div>
+                        </section>
+                        <section class="module parallax parallax-2">
+                            <div class="container">
+                                <h1>5 Day Forecast</h1>
+                            </div>
+                        </section>
+                        <section class="module content">
+                            <div class="container">
+                                <!-- <h2>...........</h2> -->
+                         
+                            </div>
+                        </section>
+                        <section class="module parallax parallax-3">
+                            <div class="container">
+                                <h1>Month Forecast</h1>
+                            </div>
+                        </section>
+                        <section class="module content">
+                            <div class="container">
+                                <!-- <h2>............</h2> -->
+                               
+                            </div>
+                        </section>
+                    </main>
+                    <!-- /main -->
+                    
+                    <!-- /footer -->
+                </div>
+
+            </div>
+            <!-- END DIVIDER -->
+            <!-- START 5 DAY -->
+            <!--     <section class="module parallax parallax-3">
+        <div class="container fiveDay">
+            <div class="row">
+                <div class="col-md-1">PADDING</div>
+                <div class="col-md-2">DAY 1</div>
+                <div class="col-md-2">DAY 2</div>
+                <div class="col-md-2">DAY 3</div>
+                <div class="col-md-2">DAY 4</div>
+                <div class="col-md-2">DAY 5</div>
+                <div class="col-md-1">PADDING</div>
+            </div>
+        </div>
+    </section> -->
+            <!-- END 5 DAY -->
+            <!-- end of main DIV -->
+            <!--controllers-->
+            <script src="app/controllers/MainController.js"></script>
+            <!--directives-->
+            <script src="app/directives/currentConditions.js"></script>
+            <!--services-->
+            <script src="app/services/current.js"></script>
+</body>
+
+</html>
